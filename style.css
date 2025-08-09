@@ -1,3 +1,9 @@
+:root {
+    --night-gray: #0A0A0A;
+    --main-color: #FFEC1F;
+    --complimentary-color: #1F32FF;
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -17,18 +23,67 @@ body {
     height: 100vh;
     overflow-x: hidden;
     color: #fff;
-    background-color: #141414;
+    background-color: var(--night-gray);
 }
 
 header {
     position: sticky;
     top: 0;
-    padding: 1.5em;
-    background-color: #141414;
+    padding: 1.2em;
+    background-color: var(--night-gray);
+}
+
+a {
+    color: white;
+    transition: ease-in-out .3s;
+}
+
+a:hover {
+    color: var(--main-color);
+    transition: ease-in-out .5s;
+    font-size: 1.2rem;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+}
+
+#navbar a {
+    margin-left: .8em;
 }
 
 #home {
-    background: url(/assets/images/jacob-GullDyp-j10-unsplash.jpg) no-repeat center center;
+    background: url(./assets/images/home-background-dk.jpg) no-repeat center center;
     background-size: cover;
     height: 100vh;
+    background-position-x: left;
+    display: grid;
+    place-items: center;
+}
+
+#presentation-container p {
+    font-size: 1.4rem;
+    font-weight: 200;
+}
+
+#presentation-container h1 {
+    font-size: 4rem;
+}
+
+#presentation-container h2 {
+    font-size: 1.6rem;
+    font-weight: 400;
+    letter-spacing: .7rem;
+}
+
+.active {
+    color: var(--main-color);
+    font-weight: bold;
+    text-decoration: underline;
+    font-size: 1.2rem;
+}
+
+.color-main {
+    color: var(--main-color);
 }
