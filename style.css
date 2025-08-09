@@ -29,24 +29,42 @@ body {
 header {
     position: sticky;
     top: 0;
-    padding: 1.2em;
+    padding: 1.5em;
     background-color: var(--night-gray);
 }
 
-a {
-    color: white;
+header a {
+    color: #fff;
     transition: ease-in-out .3s;
 }
 
-a:hover {
+header a:hover {
     color: var(--main-color);
-    transition: ease-in-out .5s;
+    transition: ease-in-out .3s;
     font-size: 1.2rem;
 }
 
 ul {
     list-style: none;
     display: flex;
+    align-items: center;
+    margin-top: 1.2em;
+}
+
+ul li:not(:first-child) {
+    margin-left: 1em;
+}
+
+#github a, #linkedin a {
+    font-size: 2rem;
+    color: #fff;
+    transition: ease-in-out .3s;
+}
+
+#github a:hover, #linkedin a:hover {
+    font-size: 2.4rem;
+    color: var(--main-color);
+    transition: ease-in-out .3s;
 }
 
 #navbar a {
@@ -59,7 +77,8 @@ ul {
     height: 100vh;
     background-position-x: left;
     display: grid;
-    place-items: center;
+    align-items: center;
+    padding: 7em;
 }
 
 #presentation-container p {
@@ -69,11 +88,12 @@ ul {
 
 #presentation-container h1 {
     font-size: 4rem;
+    font-weight: 500;
 }
 
 #presentation-container h2 {
     font-size: 1.6rem;
-    font-weight: 400;
+    font-weight: 300;
     letter-spacing: .7rem;
 }
 
@@ -86,4 +106,25 @@ ul {
 
 .color-main {
     color: var(--main-color);
+    font-weight: bold;
+}
+
+.download-btn {
+    border: 1px solid var(--main-color);
+    padding: .8em;
+    border-radius: 1em;
+    background: none;
+    color: #fff;
+    transition: ease-in-out .3s;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.download-btn:hover {
+    background-color: var(--main-color);
+    color: #000;
+    transition: ease-in-out .3s;
+}
+.fa-solid {
+    margin-right: .4em;
 }
