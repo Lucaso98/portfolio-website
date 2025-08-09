@@ -128,3 +128,12 @@ ul li:not(:first-child) {
 .fa-solid {
     margin-right: .4em;
 }
+
+#about {
+    display: flex;
+}
+
+#about-img {
+    width: 100%;
+    max-width: 600px;
+}
