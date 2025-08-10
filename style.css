@@ -52,6 +52,9 @@ ul {
     list-style: none;
     display: flex;
     align-items: center;
+}
+
+#socials-list {
     margin-top: 1.2em;
 }
 
@@ -115,8 +118,8 @@ ul li:not(:first-child) {
 
 .main-btn {
     border: 1px solid var(--main-color);
-    padding: .8em;
-    border-radius: 1em;
+    padding: 0.6em 0.8em;
+    border-radius: 0.8em;
     background: none;
     color: var(--off-white);
     transition: ease-in-out .3s;
@@ -129,6 +132,7 @@ ul li:not(:first-child) {
     color: var(--night-gray-dk);
     transition: ease-in-out .3s;
 }
+
 .fa-solid {
     margin-right: .4em;
 }
@@ -172,6 +176,11 @@ ul li:not(:first-child) {
     height: 100vh;
     padding: 7em;
     text-align: center;
+    background-color: var(--night-gray-dk);
+}
+
+#portfolio h2 {
+    font-size: 2rem;
 }
 
 .grid-container {
@@ -179,6 +188,7 @@ ul li:not(:first-child) {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
     gap: 20px;
+    margin-top: 2em;
 }
 
 .grid-item img {
@@ -194,8 +204,81 @@ ul li:not(:first-child) {
     transition: ease-in-out .3s;
 }
 
-footer {
-    width: 100%;
-    height: 2.5em;
+#contact {
+    padding: 7em;
+    height: 100vh;
+    justify-content: space-around;
+    background: url(./assets/images/contact-bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
     background-color: var(--night-gray-lt);
+    background-blend-mode: overlay;
+    place-items: center;
+}
+
+#contact h2 {
+    font-size: 2rem;
+}
+
+#contact a {
+    color: #FFF1E6;
+    transition: ease-in-out .3s;
+}
+
+#contact a:hover {
+    color: var(--main-color);
+    transition: ease-in-out .3s;
+    font-size: 1.2rem;
+}
+
+form {
+    width: 30%;
+}
+
+#contact, .left-contact-container, form, .contact-info-container {
+    display: flex;
+}
+
+input, textarea {
+    padding: 1em;
+    border-radius: 1em;
+    margin-top: 1.5em;
+}
+
+.left-contact-container, form, .contact-info-container {
+    flex-direction: column;
+    margin-top: 2em;
+}
+
+.contact-text-container p, .contact-info-container a:not(:first-child){
+    margin-top: 1em;
+}
+
+.submit-btn {
+    margin-top: 1.5em;
+    cursor: pointer;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background-color: var(--night-gray-lt);
+    padding: 1em 3em;
+}
+
+footer ul li {
+    margin: 0 1em;
+}
+
+footer ul li a {
+    color: white;
+    transition: ease-in-out .3s;
+}
+
+footer ul li a:hover {
+    color: var(--main-color);
+    transition: ease-in-out .3s;
+    font-size: 1.2rem;
 }
