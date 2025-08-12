@@ -1,11 +1,18 @@
-var navbar = document.getElementById("navbar");
-var navLinks = navbar.getElementsByClassName("nav-link");
+let sections = document.querySelectorAll('section');
+let navLinks = document.querySelectorAll('header nav a');
 
-for (let i = 0; i < navLinks.length; i++) {
-   navLinks[i].addEventListener("click", function() {
-    var current = document.getElementsByClassName("active");
-    current[0].className = current[0].className.replace(" active", "");
-    this.className += " active";
+window.onscroll = () => {
+   sections.forEach(section => {
+      let top = window.scrollY;
+      let offset = section.offsetTop - 150;
+      let height = section.offsetHeight;
+      let id = section.getAttribute('id');
+
+      if (top >= offset && top < offset + height) {
+         navLinks.forEach(links => {
+            links.classList.remove('active');
+            document.querySelector('header nav a[href*=' + id + ']').classList.add('active');
+         });
+      };
    });
-
-}
+};
